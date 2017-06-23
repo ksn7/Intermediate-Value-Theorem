@@ -76,7 +76,9 @@ def ivt( func = input_box( default = sin(x), label = "f(x) = ", width = 20 ),
     
     # Plot the points and a line marking N
     pts = point( ( a, f(a)), color = 'red', size = 20 )
+    pts += point( (a, 0), color = 'red', size = 30 )
     pts += point( ( b, f(b)), color = 'red', size = 20 )
+    pts += point( (b, 0), color = 'red', size = 30 )
     N_line = plot( N, x, x_min, x_max, color = 'green' )
 
     # Check if N is between f(a) and f(b)
@@ -98,6 +100,7 @@ def ivt( func = input_box( default = sin(x), label = "f(x) = ", width = 20 ),
         
         # Plot each point where f == N
         for j in range(len(options)):
+            pts += point( (options[j], 0), color = 'green', size = 30 )
             pts += point( (options[j], N), color = 'green', size = 20 )
 
         # Combine graphs and show
@@ -108,6 +111,6 @@ def ivt( func = input_box( default = sin(x), label = "f(x) = ", width = 20 ),
 </div>
 
 <hr>
-Last modified on June 22nd, 2017
+Last modified on June 23rd, 2017
 </body>
 </html>
