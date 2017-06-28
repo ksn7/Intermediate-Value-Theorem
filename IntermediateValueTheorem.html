@@ -106,11 +106,15 @@ def ivt( func = input_box( default = sin(x), label = "f(x) = ", width = 20 ),
         # Combine graphs and show
         graph = graph_f + pts + N_line + height1 + height2 + heighta + heightb
         graph.show()
+        
+        print "The values of c at which f(c) = N are "
+        for j in range(len(options)) :
+            print options[j]
 
 </script>
 </div>
 
 <hr>
-Last modified on June 23rd, 2017
+Last modified on June 28th, 2017
 </body>
 </html>
