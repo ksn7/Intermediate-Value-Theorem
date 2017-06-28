@@ -68,7 +68,7 @@ def ivt( func = input_box( default = sin(x), label = "f(x) = ", width = 20 ),
         lower = f(a)
     
     # Plot boundary lines    
-    height1 = plot( higher, x, a, b, color = 'red', fill = lower, fillcolor = '#ffcccc',
+    height1 = plot( higher, x, a, b, color = 'red', fill = lower, fillcolor = '#ffdddd',
         linestyle = '--' )
     height2 = plot( lower, x, a, b, color = 'red', linestyle = '--' )
     heighta = line( [(a,lower), (a, higher)], linestyle = '--')
@@ -101,7 +101,7 @@ def ivt( func = input_box( default = sin(x), label = "f(x) = ", width = 20 ),
         # Plot each point where f == N
         for j in range(len(options)):
             pts += point( (options[j], 0), color = 'green', size = 30 )
-            pts += point( (options[j], N), color = 'green', size = 20 )
+            pts += point( (options[j], N), color = '#336600', size = 30 )
 
         # Combine graphs and show
         graph = graph_f + pts + N_line + height1 + height2 + heighta + heightb
