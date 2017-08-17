@@ -58,6 +58,12 @@ def ivt( func = input_box( default = sin(x), label = "$f(x) = $", width = 20 ),
     # Avoid the deprecation warning        
     f = func.function(x)
     
+    # Check if a and b lie within [x_min, x_max]. If not, expand the graphing limits
+    if a < x_min:
+        x_min = a
+    if b > x_max:
+        x_max = b
+
     # Set the graph of f, assign higher and lower limits
     graph_f = plot( f, x, x_min, x_max )
     if f(a) >= f(b):
@@ -120,6 +126,6 @@ def ivt( func = input_box( default = sin(x), label = "$f(x) = $", width = 20 ),
 </div>
 
 <hr>
-Last modified on August 16th, 2017.
+Last modified on August 17th, 2017.
 </body>
 </html>
